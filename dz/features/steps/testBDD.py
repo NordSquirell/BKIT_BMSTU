@@ -1,5 +1,6 @@
 from behave import given, when, then
 import bot
+import math
 
 
 @given('I send bot message {start}')
@@ -20,3 +21,7 @@ def step_imp3(context, secondNum: str):
 @then('I send bot operation ^ and get answer {result}')
 def step_imp4(context, result: str):
     float(context.firstNum) ** float(context.secondNum) == float(result)
+
+@then('I send bot operation <> and get answer {result}')
+def step_imp4(context, result: str):
+    math.sqrt(float(context.firstNum)*float(context.firstNum) +  float(context.secondNum)*float(context.secondNum)) == float(result)
