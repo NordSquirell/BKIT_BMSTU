@@ -1,5 +1,5 @@
 from behave import *
-from lab1 import get_roots
+from roots import get_roots
 
 
 @given('I put roots {roots} into the function')
