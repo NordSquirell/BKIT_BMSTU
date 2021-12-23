@@ -1,5 +1,5 @@
 import unittest
-from lab1 import get_roots
+from roots import get_roots
 
 class TestGetRoots(unittest.TestCase):
     def testGetRoots(self):
