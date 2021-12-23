@@ -49,14 +49,15 @@ def get_roots(a, b, c):
             result.append(-math.sqrt(root))
     elif D > 0.0:
         sqD = math.sqrt(D)
-        root1 = math.sqrt((-b + sqD) / (2.0 * a))
-        root2 = math.sqrt((-b - sqD) / (2.0 * a))
-        result.append(root1)
-        result.append(root2)
-        if root1 != 0.0:
-            result.append(-root1)
-        if root2 != 0.0:
-            result.append(-root2)
+        if -b + sqD > 0.0:
+            root1 = math.sqrt((-b + sqD) / (2.0 * a))
+            root2 = math.sqrt((-b - sqD) / (2.0 * a))
+            result.append(root1)
+            result.append(root2)
+            if root1 != 0.0:
+                result.append(-root1)
+            if root2 != 0.0:
+                result.append(-root2)
     return result
 
 
@@ -77,6 +78,10 @@ def main():
         print('Один корень: {}'.format(roots[0]))
     elif len_roots == 2:
         print('Два корня: {} и {}'.format(roots[0], roots[1]))
+    elif len_roots == 3:
+        print('Три корня: {} и {}'.format(roots[0], roots[1]), roots[2])
+    elif len_roots == 4:
+        print('Четыре корня: {} и {}'.format(roots[0], roots[1]), roots[2], roots[3])
 
 
 # Если сценарий запущен из командной строки
