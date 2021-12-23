@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import Mock
-from lab1 import get_roots
+from roots import get_roots
 
 class TestQr(unittest.TestCase):
 	def test_get_roots(self):
